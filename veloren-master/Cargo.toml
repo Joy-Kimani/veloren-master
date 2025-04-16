@@ -54,7 +54,7 @@ incremental = true
 [profile.dev.package."*"]
 # TODO: seems like opt-level=2 should be sufficient here....
 opt-level = 3
-[profile.dev.package."coping chronicles-network-protocol"]
+[profile.dev.package."coping-chronicles-network-protocol"]
 opt-level = 3
 
 # this profile is used by developers if dev doesn't has enough debug information,
@@ -70,9 +70,9 @@ inherits = 'dev'
 overflow-checks = false
 debug-assertions = false
 
-[profile.no_overflow.package."coping chronicles-world"]
+[profile.no_overflow.package."coping-chronicles-world"]
 opt-level = 3
-[profile.no_overflow.package."coping chronicles-voxygen-anim"]
+[profile.no_overflow.package."coping-chronicles-voxygen-anim"]
 opt-level = 3
 
 # this profile is for profiling with using the no_overflow profile, since release can take signifcant times to build.
@@ -91,23 +91,23 @@ lto = true
 debug = false
 panic = "abort"          # don't need unwinding so we can skip including the landing pads for that
 # line tables so we can have useful backtraces for in-house crates
-[profile.release.package."coping chronicles-network"]
+[profile.release.package."coping-chronicles-network"]
 debug = 1
-[profile.release.package."coping chronicles-network-protocol"]
+[profile.release.package."coping-chronicles-network-protocol"]
 debug = 1
-[profile.release.package."coping chronicles-common"]
+[profile.release.package."coping-chronicles-common"]
 debug = 1
-[profile.release.package."coping chronicles-common-systems"]
+[profile.release.package."coping-chronicles-common-systems"]
 debug = 1
-[profile.release.package."coping chronicles-client"]
+[profile.release.package."coping-chronicles-client"]
 debug = 1
-[profile.release.package."coping chronicles-server"]
+[profile.release.package."coping-chronicles-server"]
 debug = 1
-[profile.release.package."coping chronicles-server-cli"]
+[profile.release.package."coping-chronicles-server-cli"]
 debug = 1
-[profile.release.package."coping chronicles-voxygen"]
+[profile.release.package."coping-chronicles-voxygen"]
 debug = 1
-[profile.release.package."coping chronicles-world"]
+[profile.release.package."coping-chronicles-world"]
 debug = 1
 
 [profile.release-thinlto]
@@ -130,8 +130,8 @@ debug = 1
 systems = ["x86_64-linux"]
 
 [workspace.metadata.nix.cachix]
-name = "coping chronicles-nix"
-key = "coping chronicles-nix.cachix.org-1:zokfKJqVsNV6kI/oJdLF6TYBdNPYGSb+diMVQPn/5Rc="
+name = "coping-chronicles-nix"
+key = "coping-chronicles-nix.cachix.org-1:zokfKJqVsNV6kI/oJdLF6TYBdNPYGSb+diMVQPn/5Rc="
 
 ### DEPENDENCIES ###
 
@@ -205,7 +205,7 @@ specs = { git = "https://github.com/amethyst/specs.git", rev = "4e2da1df29ee840b
 # * a few other various shader issues (fixed upstream)
 # * invalid slice::from_raw_parts call (upstream PR open)
 # * gl context locking timeout hit during pipeline creation, fixed by increasing timeout (not upstreamed, might want to just block main thread when gl backend is selected instead)
-wgpu = { git = "https://github.com/Imberflur/wgpu.git", tag = "0.18-with-fixes-for-coping chronicles-v2" }
+wgpu = { git = "https://github.com/Imberflur/wgpu.git", branch = "main" }
 #wgpu = { path = "../wgpu/wgpu" }
 
 # keyboard-keynames = { git = "https://gitlab.com/Capucho/keyboard-keynames.git", rev = "7b1375ee4ea01d0e0b80c419cb27f0498e67df3a" }

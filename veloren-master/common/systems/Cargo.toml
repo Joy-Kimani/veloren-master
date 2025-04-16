@@ -1,7 +1,7 @@
 [package]
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
-name = "coping chronicles-common-systems"
+name = "coping-hronicles-common-systems"
 version = "0.10.0"
 
 [lints]
@@ -14,10 +14,10 @@ plugins = ["common-state/plugins"]
 default = ["simd"]
 
 [dependencies]
-common = { package = "coping chronicles-common", path = ".." }
-common-net = { package = "coping chronicles-common-net", path = "../net" }
-common-ecs = { package = "coping chronicles-common-ecs", path = "../ecs" }
-common-base = { package = "coping chronicles-common-base", path = "../base" }
+common = { package = "coping-chronicles-common", path = ".." }
+common-net = { package = "coping-chronicles-common-net", path = "../net" }
+common-ecs = { package = "coping-chronicles-common-ecs", path = "../ecs" }
+common-base = { package = "coping-chronicles-common-base", path = "../base" }
 
 rand = { workspace = true, features = ["small_rng"] }
 rayon = { workspace = true }
@@ -38,4 +38,4 @@ specs = { workspace = true, features = [
 
 [dev-dependencies]
 # Setup a State
-common-state = { package = "coping chronicles-common-state", path = "../state" }
+common-state = { package = "coping-chronicles-common-state", path = "../state" }

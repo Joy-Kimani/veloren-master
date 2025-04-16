@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-world"
+name = "coping-chronicles-world"
 version = "0.10.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>"]
 edition = "2021"
@@ -26,10 +26,10 @@ cli = ["clap", "signal-hook", "indicatif"]
 default = ["simd"]
 
 [dependencies]
-common = { package = "coping chronicles-common", path = "../common" }
-common_base = { package = "coping chronicles-common-base", path = "../common/base" }
-common-net = { package = "coping chronicles-common-net", path = "../common/net" }
-common-dynlib = { package = "coping chronicles-common-dynlib", path = "../common/dynlib", optional = true }
+common = { package = "coping-chronicles-common", path = "../common" }
+common_base = { package = "coping-chronicles-common-base", path = "../common/base" }
+common-net = { package = "coping-chronicles-common-net", path = "../common/net" }
+common-dynlib = { package = "coping-chronicles-common-dynlib", path = "../common/dynlib", optional = true }
 
 bincode = { workspace = true }
 bitvec = "1.0.1"
@@ -69,7 +69,7 @@ indicatif = { version = "0.17.8", optional = true }
 
 
 [dev-dependencies]
-common-frontend = { package = "coping chronicles-common-frontend", path = "../common/frontend" }
+common-frontend = { package = "coping-chronicles-common-frontend", path = "../common/frontend" }
 criterion = { version = "0.5.1", default-features = false, features = [
     "rayon",
     "cargo_bench_support",

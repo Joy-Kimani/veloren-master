@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-client"
+name = "coping-chronicles-client"
 version = "0.17.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>"]
 edition = "2021"
@@ -26,14 +26,14 @@ tick_network = []
 default = ["simd"]
 
 [dependencies]
-common = { package = "coping chronicles-common", path = "../common", features = [
+common = { package = "coping-chronicles-common", path = "../common", features = [
     "no-assets",
 ] }
-common-base = { package = "coping chronicles-common-base", path = "../common/base" }
-common-state = { package = "coping chronicles-common-state", path = "../common/state", default-features = false }
-common-systems = { package = "coping chronicles-common-systems", path = "../common/systems", default-features = false }
-common-net = { package = "coping chronicles-common-net", path = "../common/net" }
-network = { package = "coping chronicles-network", path = "../network", features = [
+common-base = { package = "coping-chronicles-common-base", path = "../common/base" }
+common-state = { package = "coping-chronicles-common-state", path = "../common/state", default-features = false }
+common-systems = { package = "coping-chronicles-common-systems", path = "../common/systems", default-features = false }
+common-net = { package = "coping-chronicles-common-net", path = "../common/net" }
+network = { package = "coping-chronicles-network", path = "../network", features = [
     "compression",
     "quic",
 ], default-features = false }
@@ -62,19 +62,19 @@ authc = { git = "https://gitlab.com/coping chronicles/auth.git", rev = "ae0e1678
 #TODO: put bot in a different crate
 #bot only
 async-channel = { version = "2.1", optional = true }
-voxygen-i18n-helpers = { package = "coping chronicles-voxygen-i18n-helpers", path = "../voxygen/i18n-helpers", optional = true }
-client-i18n = { package = "coping chronicles-client-i18n", path = "i18n", optional = true }
-common-i18n = { package = "coping chronicles-common-i18n", path = "../common/i18n"}
+voxygen-i18n-helpers = { package = "coping-chronicles-voxygen-i18n-helpers", path = "../voxygen/i18n-helpers", optional = true }
+client-i18n = { package = "coping-chronicles-client-i18n", path = "i18n", optional = true }
+common-i18n = { package = "coping-chronicles-common-i18n", path = "../common/i18n"}
 serde = { workspace = true, features = ["rc"], optional = true }
 ron = { workspace = true, optional = true }
 clap = { workspace = true, optional = true }
 rustyline = { version = "15.0.0", optional = true }
 ## logging
-common-frontend = { package = "coping chronicles-common-frontend", path = "../common/frontend", optional = true }
+common-frontend = { package = "coping-chronicles-common-frontend", path = "../common/frontend", optional = true }
 
 [dev-dependencies]
-voxygen-i18n-helpers = { package = "coping chronicles-voxygen-i18n-helpers", path = "../voxygen/i18n-helpers" }
-client-i18n = { package = "coping chronicles-client-i18n", path = "i18n" }
+voxygen-i18n-helpers = { package = "coping-chronicles-voxygen-i18n-helpers", path = "../voxygen/i18n-helpers" }
+client-i18n = { package = "coping-chronicles-client-i18n", path = "i18n" }
 
 [[example]]
 name = "chat_cli"

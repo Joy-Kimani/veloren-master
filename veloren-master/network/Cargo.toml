@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-network"
+name = "coping-chronicles-network"
 version = "0.3.0"
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
@@ -16,7 +16,7 @@ default = ["metrics", "compression", "quic"]
 
 [dependencies]
 
-network-protocol = { package = "coping chronicles-network-protocol", path = "protocol" }
+network-protocol = { package = "coping-chronicles-network-protocol", path = "protocol" }
 
 #serialisation
 bincode = { workspace = true }

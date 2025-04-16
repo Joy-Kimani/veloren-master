@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-server"
+name = "coping-chronicles-server"
 version = "0.17.0"
 authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>"]
 edition = "2021"
@@ -19,24 +19,24 @@ hot-site = ["world/use-dyn-lib"]
 default = ["worldgen", "plugins", "persistent_world", "simd"]
 
 [dependencies]
-common = { package = "coping chronicles-common", path = "../common" }
-common-base = { package = "coping chronicles-common-base", path = "../common/base" }
-coping chronicles-query-server = { package = "coping chronicles-query-server", path = "../common/query_server", default-features = false, features = [
+common = { package = "coping-chronicles-common", path = "../common" }
+common-base = { package = "coping-chronicles-common-base", path = "../common/base" }
+coping-chronicles-query-server = { package = "coping-chronicles-query-server", path = "../common/query_server", default-features = false, features = [
     "server",
 ] }
-common-ecs = { package = "coping chronicles-common-ecs", path = "../common/ecs" }
-common-state = { package = "coping chronicles-common-state", path = "../common/state" }
-common-systems = { package = "coping chronicles-common-systems", path = "../common/systems" }
-common-net = { package = "coping chronicles-common-net", path = "../common/net" }
-world = { package = "coping chronicles-world", path = "../world" }
-rtsim = { package = "coping chronicles-rtsim", path = "../rtsim" }
-network = { package = "coping chronicles-network", path = "../network", features = [
+common-ecs = { package = "coping-chronicles-common-ecs", path = "../common/ecs" }
+common-state = { package = "coping-chronicles-common-state", path = "../common/state" }
+common-systems = { package = "coping-chronicles-common-systems", path = "../common/systems" }
+common-net = { package = "coping-chronicles-common-net", path = "../common/net" }
+world = { package = "coping-chronicles-world", path = "../world" }
+rtsim = { package = "coping-chronicles-rtsim", path = "../rtsim" }
+network = { package = "coping-chronicles-network", path = "../network", features = [
     "metrics",
     "compression",
     "quic",
 ], default-features = false }
 
-server-agent = { package = "coping chronicles-server-agent", path = "agent" }
+server-agent = { package = "coping-chronicles-server-agent", path = "agent" }
 
 #inline_tweak = "1.0.8"
 

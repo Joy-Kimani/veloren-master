@@ -1,7 +1,7 @@
 [package]
 authors = ["juliancoffee <lightdarkdaughter@gmail.com>"]
 edition = "2021"
-name = "coping chronicles-client-i18n"
+name = "coping-chronicles-client-i18n"
 description = "Optional crate for internalization and diagnostic of existing localizations for frontends to consume"
 version = "0.13.0"
 
@@ -10,8 +10,8 @@ workspace = true
 
 [dependencies]
 # Assets
-common-assets = {package = "coping chronicles-common-assets", path = "../../common/assets"}
-common-i18n = { package = "coping chronicles-common-i18n", path = "../../common/i18n" }
+common-assets = {package = "coping-chronicles-common-assets", path = "../../common/assets"}
+common-i18n = { package = "coping-chronicles-common-i18n", path = "../../common/i18n" }
 serde = { workspace = true }
 # Localization
 unic-langid = { version = "0.9"}

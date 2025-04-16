@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-common-dynlib"
+name = "coping-chronicles-common-dynlib"
 version = "0.1.0"
 authors = ["Ben Wallis <atomyc@gmail.com>"]
 edition = "2021"

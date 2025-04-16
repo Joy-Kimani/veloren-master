@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-rtsim"
+name = "coping-chronicles-rtsim"
 version = "0.10.0"
 edition = "2021"
 
@@ -7,8 +7,8 @@ edition = "2021"
 workspace = true
 
 [dependencies]
-common = { package = "coping chronicles-common", path = "../common" }
-world = { package = "coping chronicles-world", path = "../world" }
+common = { package = "coping-chronicles-common", path = "../common" }
+world = { package = "coping-chronicles-world", path = "../world" }
 serde = { workspace = true }
 hashbrown = { workspace = true }
 enum-map = { workspace = true, features = ["serde"] }

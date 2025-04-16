@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-query-server"
+name = "coping-chronicles-query-server"
 description = "Query Server crate for coping chronicles (client and server)"
 license = "GPL-3.0-or-later"
 version = "0.1.2"
