@@ -1,0 +1,30 @@
+[package]
+authors = ["juliancoffee <lightdarkdaughter@gmail.com>", "Marcel Märtens <marcel.cochem@googlemail.com>"]
+edition = "2021"
+name = "coping-chronicles-common-assets"
+description = "Crate for game loading assets for coping chronicles."
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[dependencies]
+lazy_static = { workspace = true }
+assets_manager = { version = "0.12", features = ["bincode", "ron", "json"] }
+ron = { workspace = true }
+dot_vox = "5.1"
+wavefront = "0.2" # TODO: Use vertex-colors branch when we have models that have them
+image = { workspace = true }
+tracing = { workspace = true }
+hashbrown = { workspace = true }
+
+# asset tweak
+serde = { workspace = true, optional = true }
+
+[dev-dependencies]
+walkdir = "2.3.2"
+
+[features]
+hot-reloading = ["assets_manager/hot-reloading"]
+asset_tweak = ["dep:serde", "hot-reloading"]
+plugins = ["dep:serde", "assets_manager/tar"]

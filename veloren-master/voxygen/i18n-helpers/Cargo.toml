@@ -1,0 +1,20 @@
+[package]
+authors = ["juliancoffee <lightdarkdaughter@gmail.com>"]
+edition = "2021"
+name = "coping chronicles-voxygen-i18n-helpers"
+description = "Crate for internalization and diagnostic of existing localizations."
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[dependencies]
+common-net = {package = "coping chronicles-common-net", path = "../../common/net"}
+common = {package = "coping chronicles-common", path = "../../common"}
+i18n = {package = "coping chronicles-client-i18n", path = "../../client/i18n"}
+# Utility
+tracing = { workspace = true }
+
+[dev-dependencies]
+rand = { workspace = true }
+vek = { workspace = true }

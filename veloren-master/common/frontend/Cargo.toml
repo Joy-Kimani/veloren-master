@@ -1,0 +1,26 @@
+[package]
+authors = ["Marcel Märtens <marcel.cochem@googlemail.com>", "Imbris <imbrisf@gmail.com>"]
+edition = "2021"
+name = "coping chronicles-common-frontend"
+description = "common stuff that is used by server-cli and voxygen directly"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+tracy = ["common-base/tracy", "tracing-tracy"]
+
+[dependencies]
+common-base = { package = "coping chronicles-common-base", path = "../base" }
+
+# Logging
+termcolor = "1.1"
+tracing = { workspace = true }
+tracing-appender = "0.2.0"
+tracing-subscriber = { version = "0.3.7", default-features = false, features = ["env-filter", "fmt", "time", "ansi", "smallvec", "tracing-log"]}
+
+# Tracy
+# NOTE: This must be kept in sync with the `profiling` version in `common/base`.
+# NOTE: `=` since the minor version of tracing-tracy bumped a major version of `tracy-client`
+tracing-tracy = { version = "=0.11.3", optional = true }

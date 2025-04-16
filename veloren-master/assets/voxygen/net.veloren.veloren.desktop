@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Coping chronicles
+Comment=Coping chronicles is a multiplayer voxel RPG written in Rust
+Comment[de]=Coping chronicles ist ein in Rust geschriebenes Mehrspieler Voxel RPG
+Exec=coping chronicles-voxygen
+Categories=Game;Simulation;
+Keywords=coping chronicles;sandbox;world;blocks;nodes;multiplayer;roleplaying;
+Icon=net.coping chronicles.coping chronicles
+Terminal=false

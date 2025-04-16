@@ -1,0 +1,27 @@
+[package]
+authors = ["Joshua Barretto <joshua.s.barretto@gmail.com>", "Imbris <imbrisf@gmail.com>"]
+edition = "2021"
+name = "coping chronicles-voxygen-anim"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+use-dyn-lib = ["lazy_static", "common-dynlib"]
+be-dyn-lib = []
+simd = ["vek/platform_intrinsics"]
+plugins = [ "dep:common-state", "common-state/plugins"]
+
+default = ["simd"]
+
+[dependencies]
+common = {package = "coping chronicles-common", path = "../../common"}
+common-state = {package = "coping chronicles-common-state", path = "../../common/state", optional = true}
+bytemuck = { version = "1.4", features=["derive"] }
+vek = { workspace = true }
+common-dynlib = {package = "coping chronicles-common-dynlib", path = "../../common/dynlib", optional = true}
+inline_tweak = { workspace = true, features = ["derive"] }
+
+# Hot Reloading
+lazy_static = { workspace = true, optional = true}

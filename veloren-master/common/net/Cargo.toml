@@ -1,0 +1,34 @@
+[package]
+authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
+edition = "2021"
+name = "coping chronicles-common-net"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+simd = ["vek/platform_intrinsics"]
+
+default = ["simd"]
+
+[dependencies]
+common = {package = "coping chronicles-common", path = "../../common"}
+#inline_tweak = { workspace = true }
+
+bincode = { workspace = true }
+flate2 = "1.0.20"
+image = { workspace = true, features = ["jpeg"] }
+num-traits = { workspace = true }
+sum_type = "0.2.0"
+vek = { workspace = true }
+tracing = { workspace = true }
+
+# Data structures
+hashbrown = { workspace = true }
+
+# ECS
+specs = { workspace = true, features = ["serde", "storage-event-control"] }
+
+# Serde
+serde = { workspace = true }

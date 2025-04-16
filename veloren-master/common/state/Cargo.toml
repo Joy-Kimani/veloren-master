@@ -1,0 +1,50 @@
+[package]
+authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
+edition = "2021"
+name = "coping chronicles-common-state"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+simd = ["vek/platform_intrinsics"]
+plugins = ["common-assets/plugins", "toml", "wasmtime", "wasmtime-wasi", "tar", "bincode", "serde", "dep:sha2", "dep:hex"]
+
+default = ["simd"]
+
+[dependencies]
+common = { package = "coping chronicles-common", path = ".." }
+common-net = { package = "coping chronicles-common-net", path = "../net" }
+common-ecs = { package = "coping chronicles-common-ecs", path = "../ecs" }
+common-base = { package = "coping chronicles-common-base", path = "../base" }
+common-assets = { package = "coping chronicles-common-assets", path = "../assets", optional = true}
+
+rayon = { workspace = true }
+num_cpus = "1.0"
+tracing = { workspace = true }
+vek = { workspace = true }
+
+# Data structures
+hashbrown = { workspace = true }
+
+# ECS
+specs = { workspace = true, features = ["serde", "storage-event-control", "derive"] }
+
+# Plugins
+scopeguard = "1.1.0"
+serde = { workspace = true, optional = true }
+toml = { version = "0.8", optional = true }
+tar = { version = "0.4.37", optional = true }
+bincode = { workspace = true, optional = true }
+timer-queue = "0.1.0"
+wasmtime = { version = "29.0.1", optional = true , features = ["component-model", "async"] }
+wasmtime-wasi = { version = "29.0.1", optional = true }
+async-trait = { workspace = true }
+bytes = "^1"
+futures = "0.3.30"
+sha2 = { workspace = true, optional = true }
+hex = { workspace = true, optional = true }
+
+# Tweak running code
+#inline_tweak = { version = "1.0.8", features = ["release_tweak"] }

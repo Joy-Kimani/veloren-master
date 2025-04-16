@@ -1,0 +1,36 @@
+dialogue-question-site =
+    .a0 = Where am I?
+    .a1 = Where are we?
+    .a2 = What is this place?
+dialogue-question-self =
+    .a0 = Who are you?
+    .a1 = Tell me about yourself
+dialogue-question-hire =
+    .a0 = Can I hire you?
+    .a1 = I can offer you work.
+dialogue-question-sentiment =
+    .a0 = How do you feel about...
+    .a1 = What do you think about...
+dialogue-question-directions = Can you give me directions?
+dialogue-cancel_hire = I want to stop hiring you.
+dialogue-me = Me
+dialogue-buy_hire_days =
+   .day = A day
+   .week = A week
+   .unknown = { $days ->
+     [one] { $days } day
+     *[other] { $days } days
+    }
+dialogue-cancel_interaction = I've changed my mind.
+
+dialogue-direction-tavern = The local tavern
+dialogue-direction-plaza = The nearest town square
+dialogue-direction-workshop = A workshop
+dialogue-direction-airship_dock = The airship dock
+
+dialogue-accept =
+    .a0 = Sure!
+    .a1 = Yes.
+dialogue-decline =
+    .a1 = No thanks.
+    .a2 = Sorry, not now.

@@ -1,0 +1,41 @@
+[package]
+authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
+edition = "2021"
+name = "coping chronicles-common-systems"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+simd = ["vek/platform_intrinsics"]
+plugins = ["common-state/plugins"]
+
+default = ["simd"]
+
+[dependencies]
+common = { package = "coping chronicles-common", path = ".." }
+common-net = { package = "coping chronicles-common-net", path = "../net" }
+common-ecs = { package = "coping chronicles-common-ecs", path = "../ecs" }
+common-base = { package = "coping chronicles-common-base", path = "../base" }
+
+rand = { workspace = true, features = ["small_rng"] }
+rayon = { workspace = true }
+tracing = { workspace = true }
+vek = { workspace = true }
+ordered-float = { workspace = true }
+itertools = { workspace = true }
+
+# ECS
+specs = { workspace = true, features = [
+    "serde",
+    "storage-event-control",
+    "derive",
+] }
+
+# Tweak running code
+# inline_tweak = { workspace = true, features = ["release_tweak"] }
+
+[dev-dependencies]
+# Setup a State
+common-state = { package = "coping chronicles-common-state", path = "../state" }

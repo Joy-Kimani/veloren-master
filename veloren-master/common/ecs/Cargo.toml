@@ -1,0 +1,22 @@
+[package]
+authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
+edition = "2021"
+name = "coping chronicles-common-ecs"
+version = "0.10.0"
+
+[lints]
+workspace = true
+
+[features]
+
+[dependencies]
+
+tracing = { workspace = true }
+common-base = { package = "coping chronicles-common-base", path = "../base" }
+
+# ECS
+specs = { workspace = true, features = ["serde", "storage-event-control"] }
+
+[dev-dependencies]
+#bench
+float-cmp = "0.10.0"
