@@ -3,9 +3,9 @@ authors = [
     "Joshua Barretto <joshua.s.barretto@gmail.com>",
     "Imbris <imbrisf@gmail.com>",
 ]
-default-run = "coping chronicles-voxygen"
+default-run = "coping-chronicles-voxygen"
 edition = "2021"
-name = "coping chronicles-voxygen"
+name = "coping-chronicles-voxygen"
 version = "0.17.0"
 # Cargo thinks it should build the voxygen binary even when a specific bench is specified for building
 # Uncomment below and comment out default-run if you want to avoid this
@@ -57,20 +57,20 @@ default-no-egui = ["default-publish", "hot-reloading", "shaderc-from-source"]
 default = ["default-no-egui", "egui-ui"]
 
 [dependencies]
-client = { package = "coping chronicles-client", path = "../client" }
-common = { package = "coping chronicles-common", path = "../common" }
-common-base = { package = "coping chronicles-common-base", path = "../common/base" }
-common-ecs = { package = "coping chronicles-common-ecs", path = "../common/ecs" }
-common-frontend = { package = "coping chronicles-common-frontend", path = "../common/frontend" }
-common-i18n = { package = "coping chronicles-common-i18n", path = "../common/i18n" }
-common-net = { package = "coping chronicles-common-net", path = "../common/net" }
-common-state = { package = "coping chronicles-common-state", path = "../common/state" }
-common-systems = { package = "coping chronicles-common-systems", path = "../common/systems" }
+client = { package = "coping-chronicles-client", path = "../client" }
+common = { package = "coping-chronicles-common", path = "../common" }
+common-base = { package = "coping-chronicles-common-base", path = "../common/base" }
+common-ecs = { package = "coping-chronicles-common-ecs", path = "../common/ecs" }
+common-frontend = { package = "coping-chronicles-common-frontend", path = "../common/frontend" }
+common-i18n = { package = "coping-chronicles-common-i18n", path = "../common/i18n" }
+common-net = { package = "coping-chronicles-common-net", path = "../common/net" }
+common-state = { package = "coping-chronicles-common-state", path = "../common/state" }
+common-systems = { package = "coping-chronicles-common-systems", path = "../common/systems" }
 
-anim = { package = "coping chronicles-voxygen-anim", path = "anim" }
-i18n = { package = "coping chronicles-client-i18n", path = "../client/i18n" }
-i18n-helpers = { package = "coping chronicles-voxygen-i18n-helpers", path = "i18n-helpers" }
-voxygen-egui = { package = "coping chronicles-voxygen-egui", path = "egui", optional = true }
+anim = { package = "coping-chronicles-voxygen-anim", path = "anim" }
+i18n = { package = "coping-chronicles-client-i18n", path = "../client/i18n" }
+i18n-helpers = { package = "coping-chronicles-voxygen-i18n-helpers", path = "i18n-helpers" }
+voxygen-egui = { package = "coping-chronicles-voxygen-egui", path = "egui", optional = true }
 
 # Graphics
 winit = { version = "0.28.6", features = ["serde"] }
@@ -89,11 +89,11 @@ shaderc = { git = "https://github.com/pythonesque/shaderc-rs", rev = "f2605a0206
 conrod_core = { git = "https://gitlab.com/coping chronicles/conrod.git", branch = "copypasta_0.7" }
 conrod_winit = { git = "https://gitlab.com/coping chronicles/conrod.git", branch = "copypasta_0.7" }
 euc = "0.5.3"
-iced = { package = "iced_native", git = "https://github.com/Imberflur/iced", tag = "coping chronicles-winit-0.28" }
-iced_winit = { git = "https://github.com/Imberflur/iced", tag = "coping chronicles-winit-0.28" }
+iced = { package = "iced_native", git = "https://github.com/Imberflur/iced", tag = "coping-chronicles-winit-0.28" }
+iced_winit = { git = "https://github.com/Imberflur/iced", tag = "coping-chronicles-winit-0.28" }
 glyph_brush = "0.7.0"
 # https://gitlab.com/Frinksy/keyboard-keynames/-/merge_requests/8
-keyboard-keynames = { git = "https://gitlab.com/Imbris/keyboard-keynames.git", tag = "coping chronicles-winit-0.28" }
+keyboard-keynames = { git = "https://gitlab.com/Imbris/keyboard-keynames.git", tag = "coping-chronicles-winit-0.28" }
 # EGUI
 egui = { version = "0.23", optional = true }
 egui_wgpu_backend = { git = "https://github.com/hasenbanck/egui_wgpu_backend.git", rev = "34691d4e9149deb9cd0bb8cbb5a56bffebf47588", optional = true }
@@ -110,7 +110,7 @@ levenshtein = "1.0.5"
 gilrs = { version = "0.11.0", features = ["serde-serialize"] }
 
 # Singleplayer
-server = { package = "coping chronicles-server", path = "../server", optional = true, default-features = false, features = [
+server = { package = "coping-chronicles-server", path = "../server", optional = true, default-features = false, features = [
     "worldgen",
 ] }
 
@@ -178,7 +178,7 @@ criterion = { version = "0.5.1", default-features = false, features = [
     "rayon",
     "cargo_bench_support",
 ] }
-world = { package = "coping chronicles-world", path = "../world" }
+world = { package = "coping-chronicles-world", path = "../world" }
 rayon = { workspace = true }
 
 [[bench]]

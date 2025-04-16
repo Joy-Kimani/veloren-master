@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-common-i18n"
+name = "coping-chronicles-common-i18n"
 version = "0.1.0"
 edition = "2021"
 description = "Crate for structs and methods that acknowledge the need for localization of the game"

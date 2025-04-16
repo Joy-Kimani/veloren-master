@@ -1,5 +1,5 @@
 [package]
-name = "coping chronicles-common"
+name = "coping-chronicles-common"
 version = "0.10.0"
 authors = [
     "Joshua Barretto <joshua.s.barretto@gmail.com>",
@@ -27,8 +27,8 @@ default = ["simd"]
 
 [dependencies]
 
-common-base = { package = "coping chronicles-common-base", path = "base" }
-common-i18n = { package = "coping chronicles-common-i18n", path = "i18n" }
+common-base = { package = "coping-chronicles-common-base", path = "base" }
+common-i18n = { package = "coping-chronicles-common-i18n", path = "i18n" }
 # inline_tweak = { workspace = true }
 
 # Serde
@@ -65,7 +65,7 @@ rand = { workspace = true }
 fxhash = { workspace = true }
 
 # Assets
-common-assets = { package = "coping chronicles-common-assets", path = "assets" }
+common-assets = { package = "coping-chronicles-common-assets", path = "assets" }
 dot_vox = "5.1"
 serde_repr = "0.1.6"
 

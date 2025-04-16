@@ -1,6 +1,6 @@
 [package]
 authors = ["Samuel Keiffer <samuelkeiffer@gmail.com>"]
-name = "coping chronicles-server-agent"
+name = "coping-chronicles-server-agent"
 edition = "2021"
 version = "0.1.0"
 
@@ -13,11 +13,11 @@ use-dyn-lib = ["common-dynlib"]
 be-dyn-lib = []
 
 [dependencies]
-common = { package = "coping chronicles-common", path = "../../common" }
-common-base = { package = "coping chronicles-common-base", path = "../../common/base" }
-common-dynlib = { package = "coping chronicles-common-dynlib", path = "../../common/dynlib", optional = true }
-world = { package = "coping chronicles-world", path = "../../world" }
-rtsim = { package = "coping chronicles-rtsim", path = "../../rtsim" }
+common = { package = "coping-chronicles-common", path = "../../common" }
+common-base = { package = "coping-chronicles-common-base", path = "../../common/base" }
+common-dynlib = { package = "coping-chronicles-common-dynlib", path = "../../common/dynlib", optional = true }
+world = { package = "coping-chronicles-world", path = "../../world" }
+rtsim = { package = "coping-chronicles-rtsim", path = "../../rtsim" }
 
 specs = { workspace = true, features = ["shred-derive"] }
 vek = { workspace = true }

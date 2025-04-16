@@ -1,6 +1,6 @@
 [package]
 authors = ["Ben Wallis <atomyc@gmail.com>"]
-name = "coping chronicles-voxygen-egui"
+name = "coping-chronicles-voxygen-egui"
 edition = "2021"
 version = "0.9.0"
 
@@ -12,12 +12,12 @@ use-dyn-lib = ["common-dynlib"]
 be-dyn-lib = []
 
 [dependencies]
-client = {package = "coping chronicles-client", path = "../../client"}
-common = {package = "coping chronicles-common", path = "../../common"}
+client = {package = "coping-chronicles-client", path = "../../client"}
+common = {package = "coping-chronicles-common", path = "../../common"}
 egui = "0.23"
 egui_plot = "0.23"
 egui_winit_platform = "0.20"
 lazy_static = { workspace = true }
-common-dynlib = {package = "coping chronicles-common-dynlib", path = "../../common/dynlib", optional = true}
+common-dynlib = {package = "coping-chronicles-common-dynlib", path = "../../common/dynlib", optional = true}
 
 

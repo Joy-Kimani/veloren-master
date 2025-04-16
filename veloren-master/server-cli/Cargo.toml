@@ -1,5 +1,5 @@
 [package]
-name = "coping-chronicles-network-protocol" 
+name = "coping-chronicles-server-cli"
 version = "0.17.0"
 edition = "2021"
 
@@ -28,15 +28,15 @@ hot-agent = ["server/hot-agent", "agent"]
 hot-site = ["server/hot-site", "world"]
 
 [dependencies]
-server = { package = "coping chronicles-server", path = "../server", default-features = false, features = [
+server = { package = "coping-chronicles-server", path = "../server", default-features = false, features = [
     "simd",
 ] }
-agent = { package = "coping chronicles-server-agent", path = "../server/agent", optional = true }
-common = { package = "coping chronicles-common", path = "../common" }
-common-base = { package = "coping chronicles-common-base", path = "../common/base" }
-common-net = { package = "coping chronicles-common-net", path = "../common/net" }
-common-frontend = { package = "coping chronicles-common-frontend", path = "../common/frontend" }
-world = { package = "coping chronicles-world", path = "../world", optional = true }
+agent = { package = "coping-chronicles-server-agent", path = "../server/agent", optional = true }
+common = { package = "coping-chronicles-common", path = "../common" }
+common-base = { package = "coping-chronicles-common-base", path = "../common/base" }
+common-net = { package = "coping-chronicles-common-net", path = "../common/net" }
+common-frontend = { package = "coping-chronicles-common-frontend", path = "../common/frontend" }
+world = { package = "coping-chronicles-world", path = "../world", optional = true }
 
 tokio = { workspace = true, features = ["rt-multi-thread"] }
 num_cpus = "1.0"

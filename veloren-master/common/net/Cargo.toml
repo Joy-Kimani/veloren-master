@@ -1,7 +1,7 @@
 [package]
 authors = ["Marcel Märtens <marcel.cochem@googlemail.com>"]
 edition = "2021"
-name = "coping chronicles-common-net"
+name = "coping-chronicles-common-net"
 version = "0.10.0"
 
 [lints]
@@ -13,7 +13,7 @@ simd = ["vek/platform_intrinsics"]
 default = ["simd"]
 
 [dependencies]
-common = {package = "coping chronicles-common", path = "../../common"}
+common = {package = "coping-chronicles-common", path = "../../common"}
 #inline_tweak = { workspace = true }
 
 bincode = { workspace = true }
